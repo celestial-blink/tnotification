@@ -1,0 +1,67 @@
+@import url('@styles/_responsive.pcss');
+
+.twrapper-message {
+    height: auto;
+    width: 0;
+    background-color: red;
+    overflow: visible;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+#twrapper-message--bottom-center {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    .tmessage {
+        left: -155px;
+        @mixin sizeMedium {
+            left: -175px;
+        }
+    }
+}
+
+#twrapper-message--bottom-right {
+    left: inherit;
+    right: 10px;
+    .tmessage {
+        right: 310px;
+        @mixin sizeMedium {
+            right: 350px;
+        }
+    }
+}
+
+#twrapper-message--top-left {
+    bottom: inherit;
+    top: 10px;
+}
+
+#twrapper-message--top-center {
+    bottom: inherit;
+    left: 0;
+    right: 0;
+    top: 10px;
+    margin: 0 auto;
+    .tmessage {
+        left: -155px;
+        @mixin sizeMedium {
+            left: -175px;
+        }
+    }
+}
+
+#twrapper-message--top-right {
+    bottom: inherit;
+    left: inherit;
+    top: 10px;
+    right: 10px;
+    .tmessage {
+        right: 310px;
+        @mixin sizeMedium {
+            right: 350px;
+        }
+    }
+}

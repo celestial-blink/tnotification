@@ -1,0 +1,15 @@
+{
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@layouts/*": ["src/layout/*"],
+            "@views/*": ["src/views/*"],
+            "@helpers/*": ["src/helpers/*"],
+            "@styles/*": ["src/styles/*"]
+        }
+    }
+}

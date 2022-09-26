@@ -1,0 +1,262 @@
+@import url('@styles/_colors.pcss');
+@import url('@styles/_responsive.pcss');
+
+.tmessage {
+    display: flex;
+    background-color: white;
+    width: 310px;
+    height: 60px;
+    font-size: 13px;
+    padding: .3em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    border-bottom: 5px solid $info-color;
+    align-items: center;
+    font-family: inherit, cursive;
+    margin: 7px 0;
+    position: relative;
+    @mixin sizeMedium {
+        font-size: 14px;
+        border-radius: 8px;
+        border-bottom-width: 8px;
+        margin: 10px 0;
+        width: 350px;
+        height: 80px;
+    }
+    h3, p {
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        color: inherit;
+        font-size: .9em;
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 220px;
+        @mixin sizeMedium {
+            max-width: 240px;
+        }
+    }
+    p {
+        font-size: .7em;
+        max-height: 35px;
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        @mixin sizeMedium {
+            max-height: 45px;
+            max-width: 240px;
+        }
+    }
+
+    i {
+        pointer-events: none;
+    }
+
+    button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    &__icon {
+        color: $info-color;
+        display: block;
+        height: 45px;
+        width: 35px;
+        flex: none;
+        margin-right: 5px;
+        font-size: 3em;
+        text-align: center;
+        padding: 3px 0;
+        @mixin sizeMedium {
+            height: 60px;
+            width: 50px;
+        }
+    }
+
+    &__close {
+        width: 40px;
+        height: 40px;
+        flex: none;
+        font-size: 2em;
+        text-align: center;
+        padding: 3px 0;
+        color: $neutral-gray-color;
+        cursor: pointer;
+    }
+}
+
+.tmessage--error {
+    border-bottom-color: $error-color;
+    .tmessage__icon {
+        color: $error-color;
+    }
+}
+
+.tmessage--success {
+    border-bottom-color: $success-color;
+    .tmessage__icon {
+        color: $success-color;
+    }
+}
+
+.tmessage--warning {
+    border-bottom-color: $warning-color;
+    .tmessage__icon {
+        color: $warning-color;
+    }
+}
+
+.animate--in-left {
+    animation: fadeInLeft .4s;
+}
+
+.animate--out-left {
+    animation: fadeOutLeft .4s;
+}
+
+.animate--in-right {
+    animation: fadeInRight .4s;
+    @mixin sizeMedium {
+        animation: fadeInRightMedium .4s;
+    }
+}
+
+.animate--out-right {
+    animation: fadeOutRight .4s;
+    @mixin sizeMedium {
+        animation: fadeOutRight .4s;
+    }
+}
+
+.animate--in-bottom-center {
+    animation: fadeInBottomCenter .4s;
+}
+
+.animate--out-bottom-center {
+    animation: fadeOutBottomCenter .4s;
+}
+
+.animate--in-top-center {
+    animation: fadeInTopCenter .4s;
+}
+
+.animate--out-top-center {
+    animation: fadeOutTopCenter .4s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        left: -500px;
+        opacity: 0;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        left: 0px;
+        opacity: 1;
+    }
+    100% {
+        left: -500px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: 310px;
+        opacity: 1;
+    }
+}
+@keyframes fadeInRightMedium {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+    100% {
+        right: 350px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        right: 310px;
+        opacity: 1;
+    }
+    100% {
+        right: -500px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutRightMedium {
+    0% {
+        right: 350px;
+        opacity: 1;
+    }
+    100% {
+        right: -500px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInBottomCenter {
+    0% {
+        bottom: -80px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutBottomCenter {
+    0% {
+        bottom: 0px;
+        opacity: 1;
+    }
+    100% {
+        bottom: -80px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInTopCenter {
+    0% {
+        top: -80px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutTopCenter {
+    0% {
+        top: 0px;
+        opacity: 1;
+    }
+    100% {
+        top: -80px;
+        opacity: 0;
+    }
+}

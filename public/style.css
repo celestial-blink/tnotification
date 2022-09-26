@@ -1,0 +1,9 @@
+#app button {
+    height: 40px;
+    background-color: #2A2E3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 300;
+    margin: 5px;
+}
