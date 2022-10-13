@@ -1,18 +1,15 @@
 import './styles/_general.css';
 
-import '../dist/style.css';
-
-// import addMessage from '../dist/tnotification';
-
 import { addMessage } from '@layouts/script';
 
 document.addEventListener('DOMContentLoaded', _ => {
     document.getElementById("test1").addEventListener("click", _ => {
         addMessage({
             data: {
-                title: "Hola mundo Hola mundo Hola mundo Hola mundo",
-                content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
-                type: "info"
+                title: "Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo",
+                content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
+                type: "info",
+                timeout: 100000
             },
             position: "bottomleft"
         });

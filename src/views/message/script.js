@@ -4,7 +4,7 @@ import template from './index.html?raw';
 
 import replaceContent from '@helpers/replaceContent';
 
-const createMessage = ({ title = "", content = "", type = "", animateIn = "", animateOut = "", timeout = 8000, removeEmpty = false }) => {
+const createMessage = ({ title = "", content = "", type = "", animateIn = "", animateOut = "", timeout = 8000, removeEmpty = false, style = "" }) => {
 
     const icons = {
         error: "fa-times",
@@ -22,9 +22,10 @@ const createMessage = ({ title = "", content = "", type = "", animateIn = "", an
 
     const prepareContent = replaceContent({
         data: {
+            "{{data-custom-style}}": !!style && `style="${style}"` || "",
             "{{data-tittle-content}}": title,
             "{{data-text-content}}": content,
-            "{{data-icon}}": icons[type?.toLowerCase()] ?? "",
+            "{{data-icon}}": icons[type?.toLowerCase()] ?? "fa-info",
             "{{data-theme}}": themes[type?.toLowerCase()] ?? ""
         },
         template
