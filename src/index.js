@@ -1,8 +1,4 @@
-import './styles/_general.css';
-
-import '../dist/style.css';
-
-// import addMessage from '../dist/tnotification';
+import './styles/_general.pcss';
 
 import { addMessage } from '@layouts/script';
 
@@ -10,9 +6,10 @@ document.addEventListener('DOMContentLoaded', _ => {
     document.getElementById("test1").addEventListener("click", _ => {
         addMessage({
             data: {
-                title: "Hola mundo Hola mundo Hola mundo Hola mundo",
-                content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
-                type: "info"
+                title: "Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo",
+                content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
+                type: "info",
+                timeout: 100000
             },
             position: "bottomleft"
         });
@@ -22,7 +19,7 @@ document.addEventListener('DOMContentLoaded', _ => {
             data: {
                 title: "Hola mundo",
                 content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
-                type: "info"
+                type: "error"
             },
             position: "bottomcenter"
         });
@@ -32,7 +29,8 @@ document.addEventListener('DOMContentLoaded', _ => {
             data: {
                 title: "Hola mundo",
                 content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
-                type: "info"
+                type: "info",
+                timeout: 100000
             },
             position: "bottomright"
         });
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', _ => {
             data: {
                 title: "Hola mundo",
                 content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
-                type: "info"
+                type: "info",
             },
             position: "topleft"
         });

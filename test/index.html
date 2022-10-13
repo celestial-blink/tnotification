@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../dist/Logo2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/3600495771.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>tnotification</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="test1">Bottom left</button>
+      <button id="test2">Bottom center</button>
+      <button id="test3">Bottom right</button>
+      <button id="test4">Top left</button>
+      <button id="test5">Top center</button>
+      <button id="test6">Top right</button>
+    </div>
+
+    <!-- <div class="twrapper-message" id="twrapper-message--top-right">
+      <div class="tmessage">
+        <i class="fas fa-info tmessage__icon"></i>
+        <section class="tmessage__content" id="talk">
+            <div>
+                <h3>Hola mundo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, delectus. Rem unde omnis quibusdam a.</p>
+            </div>
+        </section>
+        <button class="tmessage__close">
+            <i class="fas fa-times-circle"></i>
+        </button>
+    </div>
+    </div> -->
+
+    <script src="../dist/tnotification.umd.cjs"></script>
+    <script>
+      tnotification.addMessage({
+            data: {
+                title: "Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo Hola mundo",
+                content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
+                type: "info",
+                timeout: 5000
+            },
+            position: "bottomleft"
+        });
+    </script>
+  </body>
+</html>

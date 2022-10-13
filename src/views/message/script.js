@@ -4,13 +4,13 @@ import template from './index.html?raw';
 
 import replaceContent from '@helpers/replaceContent';
 
-const createMessage = ({ title = "", content = "", type = "", animateIn = "", animateOut = "", timeout = 8000, removeEmpty = false }) => {
+const createMessage = ({ title = "", content = "", type = "", animateIn = "", animateOut = "", timeout = 8000, removeEmpty = false, style = "" }) => {
 
     const icons = {
-        error: "fa-times",
-        warning: "fa-exclamation",
-        success: "fa-check",
-        info: "fa-info"
+        error: "icon-times",
+        warning: "icon-exclamation",
+        success: "icon-check",
+        info: "icon-info"
     };
 
     const themes = {
@@ -22,9 +22,10 @@ const createMessage = ({ title = "", content = "", type = "", animateIn = "", an
 
     const prepareContent = replaceContent({
         data: {
+            "{{data-custom-style}}": !!style && `style="${style}"` || "",
             "{{data-tittle-content}}": title,
             "{{data-text-content}}": content,
-            "{{data-icon}}": icons[type?.toLowerCase()] ?? "",
+            "{{data-icon}}": icons[type?.toLowerCase()] ?? "icon-info",
             "{{data-theme}}": themes[type?.toLowerCase()] ?? ""
         },
         template

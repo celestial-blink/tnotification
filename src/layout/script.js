@@ -49,7 +49,19 @@ function prepareWrapper(position) {
     * @param {boolean} data.removeEmpty - remove empty wrapper
 */
 
-const addMessage = ({ data = {}, position = "bottomleft" }) => {
+const defaultValues = {
+    data: {
+        title: "",
+        content: "",
+        timeout: 8000,
+        type: "info",
+        removeEmpty: true
+    },
+    position: "bottomleft"
+}
+
+const addMessage = (payload = defaultValues) => {
+    const { data, position } = Object.assign({}, defaultValues, payload)
     const animationIn = {
         get left() { return "animate--in-left" },
         get right() { return "animate--in-right" },
