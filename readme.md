@@ -8,10 +8,11 @@ is a library for simple alert messages
 
 Install tnotification as 'umd', 'module' or 'common' (Requiere css)
 
-```javascript
+```html
   <link rel="stylesheet" href="/dist/style.css">
-
   <script src="/dist/tnotification.umd.cjs"></script>
+```
+```javascript
   or
   import tnotification from '/dist/tnotification';
   or
