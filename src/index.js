@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', _ => {
                 title: "Hola mundo",
                 content: "Lorem input Lorem input Lorem input Lorem input Lorem input Lorem input",
                 type: "info",
-                timeout: 100000
+                timeout: 4000
             },
             position: "bottomright"
         });

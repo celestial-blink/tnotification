@@ -19,6 +19,7 @@
     font-family: inherit, cursive;
     margin: 7px 0;
     position: relative;
+    will-change: transform, opacity;
     @mixin sizeMedium {
         font-size: 16px;
         border-radius: 8px;
@@ -141,7 +142,7 @@
 .animate--out-right {
     animation: fadeOutRight .4s;
     @mixin sizeMedium {
-        animation: fadeOutRight .4s;
+        animation: fadeOutRightMedium .4s;
     }
 }
 
@@ -163,109 +164,109 @@
 
 @keyframes fadeInLeft {
     0% {
-        left: -500px;
+        transform: translateX(-500px);
         opacity: 0;
     }
     100% {
-        left: 0px;
+        transform: translateX(0px);
         opacity: 1;
     }
 }
 
 @keyframes fadeOutLeft {
     0% {
-        left: 0px;
+        transform: translateX(0px);
         opacity: 1;
     }
     100% {
-        left: -500px;
+        transform: translateX(-500px);
         opacity: 0;
     }
 }
 
 @keyframes fadeInRight {
     0% {
-        right: -500px;
+        transform: translateX(500px);
         opacity: 0;
     }
     100% {
-        right: 310px;
+        transform: translateX(0);
         opacity: 1;
     }
 }
 @keyframes fadeInRightMedium {
     0% {
-        right: -500px;
+        transform: translateX(500px);
         opacity: 0;
     }
     100% {
-        right: 370px;
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
 @keyframes fadeOutRight {
     0% {
-        right: 310px;
+        transform: translateX(0px);
         opacity: 1;
     }
     100% {
-        right: -500px;
+        transform: translateX(500px);
         opacity: 0;
     }
 }
 
 @keyframes fadeOutRightMedium {
     0% {
-        right: 370px;
+        transform: translateX(0px);
         opacity: 1;
     }
     100% {
-        right: -500px;
+        transform: translateX(500px);
         opacity: 0;
     }
 }
 
 @keyframes fadeInBottomCenter {
     0% {
-        bottom: -80px;
+        transform: translateY(80px);
         opacity: 0;
     }
     100% {
-        bottom: 0px;
+        transform: translateY(0px);
         opacity: 1;
     }
 }
 
 @keyframes fadeOutBottomCenter {
     0% {
-        bottom: 0px;
+        transform: translateY(0px);
         opacity: 1;
     }
     100% {
-        bottom: -80px;
+        transform: translateY(80px);
         opacity: 0;
     }
 }
 
 @keyframes fadeInTopCenter {
     0% {
-        top: -80px;
+        transform: translateY(-80px);
         opacity: 0;
     }
     100% {
-        top: 0px;
+        transform: translateY(0px);
         opacity: 1;
     }
 }
 
 @keyframes fadeOutTopCenter {
     0% {
-        top: 0px;
+        transform: translateY(0px);
         opacity: 1;
     }
     100% {
-        top: -80px;
+        transform: translateY(80px);
         opacity: 0;
     }
 }
