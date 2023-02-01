@@ -57,7 +57,7 @@ const createMessage = ({ title = "", content = "", type = "", animateIn = "", an
             setTimeout(_ => {
                 removeWrapper(event.target.closest(".twrapper-message"));
                 event.target.remove();
-            }, 390, event);
+            }, 400, event);
         }, timeout, event);
     }
 
@@ -66,7 +66,7 @@ const createMessage = ({ title = "", content = "", type = "", animateIn = "", an
         setTimeout(_ => {
             removeWrapper(event.target.closest(".twrapper-message"));
             event.target.parentElement.remove();
-        }, 390, event);
+        }, 400, event);
     }
 
     wrapper.addEventListener("beginBuild", handleCloseAuto, { once: true });

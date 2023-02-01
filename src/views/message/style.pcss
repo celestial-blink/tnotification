@@ -20,6 +20,8 @@
     margin: 7px 0;
     position: relative;
     will-change: transform, opacity;
+    animation-duration: .4s;
+    animation-fill-mode: both;
     @mixin sizeMedium {
         font-size: 16px;
         border-radius: 8px;
@@ -125,41 +127,41 @@
 }
 
 .animate--in-left {
-    animation: fadeInLeft .4s;
+    animation-name: fadeInLeft;
 }
 
 .animate--out-left {
-    animation: fadeOutLeft .4s;
+    animation-name: fadeOutLeft;
 }
 
 .animate--in-right {
-    animation: fadeInRight .4s;
+    animation-name: fadeInRight;
     @mixin sizeMedium {
-        animation: fadeInRightMedium .4s;
+        animation-name: fadeInRightMedium;
     }
 }
 
 .animate--out-right {
-    animation: fadeOutRight .4s;
+    animation-name: fadeOutRight;
     @mixin sizeMedium {
-        animation: fadeOutRightMedium .4s;
+        animation-name: fadeOutRightMedium;
     }
 }
 
 .animate--in-bottom-center {
-    animation: fadeInBottomCenter .4s;
+    animation-name: fadeInBottomCenter;
 }
 
 .animate--out-bottom-center {
-    animation: fadeOutBottomCenter .4s;
+    animation-name: fadeOutBottomCenter;
 }
 
 .animate--in-top-center {
-    animation: fadeInTopCenter .4s;
+    animation-name: fadeInTopCenter;
 }
 
 .animate--out-top-center {
-    animation: fadeOutTopCenter .4s;
+    animation-name: fadeOutTopCenter;
 }
 
 @keyframes fadeInLeft {
