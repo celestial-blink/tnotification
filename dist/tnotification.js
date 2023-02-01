@@ -48,12 +48,12 @@ const k = `<div class="tmessage {{data-theme}}" {{data-custom-style}}>\r
       var l;
       (l = e.target.querySelector("button")) == null || l.removeEventListener("click", u), p(e.target), setTimeout((A) => {
         d(e.target.closest(".twrapper-message")), e.target.remove();
-      }, 390, e);
+      }, 400, e);
     }, c, e);
   }, u = (e) => {
     p(e.target.parentElement), setTimeout((w) => {
       d(e.target.closest(".twrapper-message")), e.target.parentElement.remove();
-    }, 390, e);
+    }, 400, e);
   };
   return g.addEventListener("beginBuild", $, { once: !0 }), (b = g.querySelector("button")) == null || b.addEventListener("click", u, { once: !0 }), g.dispatchEvent(x), g;
 };
